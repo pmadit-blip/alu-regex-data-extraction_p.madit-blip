@@ -1,0 +1,41 @@
+{
+    "emails": [
+        "ding.ding@alueducation.com",
+        "akiki_dories@alumni.alueducation.com",
+        "paul@si.alueducation.com"
+    ],
+    "alu_official_emails": [
+        "ding.ding@alueducation.com"
+    ],
+    "alu_alumni_emails": [
+        "akiki_dories@alumni.alueducation.com"
+    ],
+    "alu_si_emails": [
+        "paul@si.alueducation.com"
+    ],
+    "urls": [
+        "https://www.alueducation.com/portal/login?",
+        "http://example.org/login?next=dashboard",
+        "https://sub.domain.co.uk/path/index.html"
+    ],
+    "phone_numbers": [
+        "+250 754 093 478",
+        "(320) 456-4388",
+        "+1-320-940-0199"
+    ],
+    "credit_cards_masked": [
+        "**** **** **** 0906",
+        "**** **** **** 5636"
+    ],
+    "times": [
+        "8:20",
+        "8:30 PM",
+        "9:30"
+    ],
+    "security_alerts": [
+        "script injection detected",
+        "SQL injection detected",
+        "path traversal detected",
+        "unsafe URL scheme detected"
+    ]
+}

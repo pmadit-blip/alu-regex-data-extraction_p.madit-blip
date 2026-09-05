@@ -1,0 +1,61 @@
+Customer support log. Exported: 2026-09-02
+
+Hello team,
+
+Just forwarding the tickets from this week. Some of these came in through
+the API and a few were typed in manually so the formatting is all over the place.
+
+---
+
+Hello there, my name is Kon and ding.ding@alueducation.com is my colleahue. We work together on the admissions team.
+A student named Akiki with an email akiki_dories@alumni.alueducation.com says she can't log into the portal however much time she tried.
+The following is her phone number +250 754 093 478 and she paid with card number 4532 0251 8283 0906 on Wednesday.
+I hope someone could check https://www.alueducation.com/portal/login? As she said it just hangs at 08:20.
+
+---
+
+From: paul@si.alueducation.com
+Sent: Thursdayay 8:30 PM
+
+Hi, just a quick one - the student below tried to register but the system keeps rejecting the card.
+Card used: 5050-1020-2846-5636
+Phone on file: (320) 456-4388
+Backup number: +1-320-940-0199
+Please check http://example.org/login?next=dashboard for any error log.
+Meeting to discuss is at 21:30 tonight to anyone who will not be busy by that time.
+
+---
+
+Do not process these they came from web for and look suspicious.
+
+admin@@alueducation.com tried to submit a reset request.
+Someone also sent: fake@alueducation and user@evil.com - they look like test entries.
+hacker<script>@alueducation.com was flagged by the filter automatically.
+
+The following card numbers were submitted and rejected:
+- 1234 5678 9900 9900 (flagged as test number)
+- 4092-4563-174 (incomplete, only 15 digits)
+- 0000 0000 0000 0000 (all zeros, obviously fake)
+
+Phone entries that didn't match any format:
+abcd-123-999
+999999
+
+---
+
+Server logs also caught the following injected content. Flagged for review:
+
+<script>alert('hacked')</script>
+DROP TABLE users;
+../../etc/passwd
+javascript:alert('xss')
+http//broken-url.com
+
+---
+
+Other valid contacts from this week:
+
+Reach out to support via https://sub.domain.co.uk/path/index.html
+Meeting scheduled for 06:75 was rejected by the calendar system (invalid time).
+
+End of log.
