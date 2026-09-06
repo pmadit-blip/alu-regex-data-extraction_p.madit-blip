@@ -75,14 +75,14 @@ credit_card_pattern = r"""
 """
 
 # TIME
-# I put the 12-hour format first so "7:30 PM" gets matched as a full 12-hour time
-# if I put 24-hour first it would match "7:30" and ignore the PM
+# I put the 12-hour format first so "8:30 PM" gets matched as a full 12-hour time
+# if I put 24-hour first it would match part of a 12-hour time and ignore the PM
 # invalid minutes like :75 are blocked by [0-5]\d
 time_pattern = r"""
-\b(
-    ([1-9]|1[0-2]):[0-5]\d[ ]?(AM|PM)
+\b(?:
+    (?:[1-9]|1[0-2]):[0-5]\d[ ]?(?:AM|PM)
     |
-    ([01]?\d|2[0-3]):[0-5]\d
+    (?:[01]?\d|2[0-3]):[0-5]\d
 )\b
 """
 
@@ -109,7 +109,7 @@ credit_cards = re.findall(credit_card_pattern, raw_text, re.VERBOSE)
 credit_cards = [card[0] if isinstance(card, tuple) else card for card in credit_cards]
 
 times = re.findall(time_pattern, raw_text, re.VERBOSE | re.IGNORECASE)
-formatted_times = [t[0] for t in times]
+formatted_times = times
 
 # =========================
 # MASK SENSITIVE DATA
@@ -122,8 +122,7 @@ formatted_times = [t[0] for t in times]
 masked_cards = []
 
 KNOWN_INVALID_CARDS = {
-    "1234567899990000",
-    "1234567890000000",
+    "1234567899009900",
 }
 
 for card in credit_cards:
